@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./asset/index.js" defer></script>
+    <link rel="stylesheet" href="./asset/css/styles.css" />
+    <link rel="stylesheet" href="./asset/css/background.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Edil Abdiaziz</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <header>
+        <div class="topnav">
+          <div class="active">EA</div>
+          <div id="myLink">
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="hamburgerBar()"
+            ><img src="./asset/img/menu.png" alt="icon" />
+          </a>
+        </div>
+        <div class="desktopNav">
+          <div class="desktopActive">
+            <li class="desktopLogo"><a href="#home">EA</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About</a></li>
+          </div>
+        </div>
+      </header>
+
+      <div class="main">
+        <div class="sidebar">
+          <div class="hero">
+            <section class="heading">
+              <!-- <img class="profile-img" src="./asset/img/profile-img.png" alt="profile-pic" width="120px"> -->
+              <div class="introOne animate__animated animate__heartBeat">
+                Hi, I'm <span>Edil</span>.
+              </div>
+              <div class="introTwo animate__animated animate__heartBeat">
+                A Software Developer.
+              </div>
+              <div class="heroBtnPosition">
+                <button class="myBtn secondMyBtn">
+                  <a href="#contact">Get in contact</a>
+                </button>
+              </div>
+            </section>
+          </div>
+          <hr />
+          <br />
+          <div class="contact-detail">
+            <div class="contact-detail-info">
+              <img src="./asset/img/email.png" alt="email-icon" width="60px" />
+              <div>
+                <p>Email:</p>
+                <p>edilabdiaziz@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-detail-info">
+              <img src="./asset/img/phone.png" alt="email-icon" width="60px" />
+              <div>
+                <p>Phone:</p>
+                <p>+44 063443 3244</p>
+              </div>
+            </div>
+          </div>
+          <br />
+          <hr />
+          <br />
+          <div class="social-media">
+            <a href="https://www.linkedin.com/in/edil-abdiaziz/" target="_blank"
+              ><img src="./asset/img/linkedin.png" alt="LinkedIn" width="50px"
+            /></a>
+            <a href="https://github.com/idil-abdi" target="_blank"
+              ><img src="./asset/img/github.png" alt="GitHub" width="50px"
+            /></a>
+          </div>
+        </div>
+
+        <div class="content">
+          <section class="border hidden" id="about">
+            <h2>About Me</h2>
+            <p>
+              As a kid, I was fascinated by puzzles—spending hours piecing
+              together intricate designs or solving riddles. I didn't realize it
+              then, but that same curiosity and love for problem-solving would
+              lead me to the world of software development.
+            </p>
+            <br />
+            <p>
+              Today, I'm a software developer who thrives on challenges, whether
+              it's optimizing an algorithm or designing a seamless user
+              interface. Every line of code I write is a piece of the puzzle,
+              contributing to the bigger picture of innovation and creativity.
+            </p>
+          </section>
+
+          <section class="border hidden" id="skills">
+            <h2>Skills</h2>
+            <div class="skillSet">
+              <div class="hidden">
+                <div class="item skillItem">
+                  <img class="imgIcon" src="./asset/img/html.png" alt="html" />
+                  <div class="skillTitle">
+                    <label for="HTML">HTML:</label>
+                    <p class="subtitle">Advance</p>
+                    <progress id="HTML" value="85" max="100"></progress>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hidden">
+                <div class="item skillItem">
+                  <img class="imgIcon" src="./asset/img/css.png" alt="css" />
+                  <div class="skillTitle">
+                    <label for="CSS">CSS</label>
+                    <p class="subtitle">Advance</p>
+                    <progress id="CSS" value="80" max="100"></progress>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hidden">
+                <div class="item skillItem">
+                  <img
+                    class="imgIcon"
+                    src="./asset/img/js.png"
+                    alt="javascript"
+                  />
+                  <div class="skillTitle">
+                    <label for="JavaScript">JavaScript</label>
+                    <p class="subtitle">Intermediate</p>
+                    <progress id="JavaScript" value="70" max="100"></progress>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hidden">
+                <div class="item skillItem">
+                  <img
+                    class="imgIcon"
+                    src="./asset/img/react.png"
+                    alt="react"
+                  />
+                  <div class="skillTitle">
+                    <label for="react">React</label>
+                    <p class="subtitle">Beginner/Intermediate</p>
+                    <progress id="react" value="55" max="100"></progress>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hidden">
+                <div class="item skillItem">
+                  <img
+                    class="imgIcon"
+                    src="./asset/img/tailwindcss.png"
+                    alt="Tailwind CSS"
+                  />
+                  <div class="skillTitle">
+                    <label for="tailwindcss">Tailwind CSS</label>
+                    <p class="subtitle">Beginner</p>
+                    <progress id="tailwindcss" value="45" max="100"></progress>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hidden">
+                <div class="item skillItem">
+                  <img
+                    class="imgIcon"
+                    src="./asset/img/figma.png"
+                    alt="Figma"
+                  />
+                  <div class="skillTitle">
+                    <label for="figma">Figma</label>
+                    <p class="subtitle">Intermediate</p>
+                    <progress id="figma" value="70" max="100"></progress>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="border" id="projects">
+            <h2 class="hidden">Projects</h2>
+
+            <div class="" id="myBtnContainer"></div>
+
+            <div class="container hidden">
+              <section id="projects" class="projects">
+                <div class="project-grid">
+                  <!-- Project 1 -->
+                  <div class="project-card">
+                    <img src="./asset/img/fjall-raven.png" alt="fjall-raven" />
+                    <div class="project-content">
+                      <h3>Fjällräven</h3>
+                      <p>
+                        Welcome to my project, where I've created a unique
+                        version of the Fjällräven website! Inspired by
+                        Fjällräven’s commitment to quality outdoor gear and
+                        sustainable practices, this website showcases my skills
+                        in web development using HTML, CSS, and JavaScript.
+                      </p>
+                      <div class="tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                      </div>
+                      <div class="project-links">
+                        <a
+                          href="https://github.com/idil-abdi/fed-group-challenge"
+                          target="_blank"
+                          >GitHub</a
+                        >
+                        <a
+                          href="https://idil-abdi.github.io/fed-group-challenge/"
+                          target="_blank"
+                          >Live Demo</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Project 2 -->
+                  <div class="project-card">
+                    <img src="./asset/img/film-nest.png" alt="Film Nest" />
+                    <div class="project-content">
+                      <h3>Film Nest</h3>
+                      <p>
+                        Film Nest is your go-to hub for all things cinema!
+                        Discover the latest trending movies, explore in-depth
+                        reviews, and connect with fellow film enthusiasts.
+                        Whether you're searching for blockbuster hits or hidden
+                        gems, we’ve got you covered. Join us and stay updated on
+                        the films everyone is talking about!
+                      </p>
+                      <div class="tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span
+                        ><span>React</span><span>Tailwind CSS</span>
+                      </div>
+                      <div class="project-links">
+                        <a
+                          href="https://github.com/idil-abdi/film-nest"
+                          target="_blank"
+                          >GitHub</a
+                        >
+                        <a
+                          href="https://idil-abdi.github.io/film-nest/"
+                          target="_blank"
+                          >Live Demo</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Project 3 -->
+                  <div class="project-card">
+                    <img
+                      src="./asset/img/mini-project.png"
+                      alt="Mini Projects"
+                    />
+                    <div class="project-content">
+                      <h3>Mini Projects</h3>
+                      <p>
+                        Welcome to my JavaScript project showcase! Explore a
+                        variety of interactive projects that highlight my coding
+                        skills and creativity. From dynamic web applications to
+                        fun mini-games, each project reflects my passion for
+                        JavaScript and problem-solving. Enjoy browsing!
+                      </p>
+                      <div class="tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                      </div>
+                      <div class="project-links">
+                        <a
+                          href="https://github.com/idil-abdi/mini-projects"
+                          target="_blank"
+                          >GitHub</a
+                        >
+                        <a
+                          href="https://idil-abdi.github.io/mini-projects/"
+                          target="_blank"
+                          >Live Demo</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Project 4 -->
+                  <div class="project-card">
+                    <img
+                      src="./asset/img/productivity.png"
+                      alt="productivity"
+                    />
+                    <div class="project-content">
+                      <h3>Productivity App</h3>
+                      <p>
+                        This Productivity App is designed to help users stay
+                        focused, organized, and motivated throughout the day. It
+                        combines key productivity tools such as a Pomodoro timer
+                        to manage time effectively, a to-do list and task
+                        tracker to plan daily goals, motivational quotes to
+                        boost inspiration, notes for capturing ideas, and a
+                        playlist to maintain focus with music.
+                      </p>
+                      <div class="tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                      </div>
+                      <div class="project-links">
+                        <a
+                          href="https://github.com/idil-abdi/mini-projects"
+                          target="_blank"
+                          >GitHub</a
+                        >
+                        <a
+                          href="https://idil-abdi.github.io/productivity-app/"
+                          target="_blank"
+                          >Live Demo</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <section class="border hidden" id="contact">
+            <h2>Contact</h2>
+
+            <form
+              id="form"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="744dac25-ac40-49d9-8035-34d91fe7c63b"
+              />
+              <div class="input-group">
+                <input
+                  name="name"
+                  type="text"
+                  class="feedback-input"
+                  placeholder="Name"
+                  id="contact-name"
+                  onkeyup="validateName()"
+                />
+                <span id="name-error"></span>
+              </div>
+
+              <div class="input-group">
+                <input
+                  name="email"
+                  type="text"
+                  class="feedback-input"
+                  placeholder="Email"
+                  id="contact-email"
+                  onkeyup="validateEmail()"
+                />
+                <span id="email-error"></span>
+              </div>
+
+              <div class="input-group">
+                <textarea
+                  name="text"
+                  class="feedback-input"
+                  placeholder="Message"
+                  id="contact-message"
+                  onkeyup="validateMessage()"
+                ></textarea>
+                <span id="message-error"></span>
+              </div>
+
+              <input
+                onclick="return validateForm();"
+                type="submit"
+                value="SUBMIT"
+              />
+              <span id="submit-error"></span>
+            </form>
+          </section>
+        </div>
+      </div>
+      <div class="footer">
+        <p>© 2025 Edil Abdiaziz. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>
