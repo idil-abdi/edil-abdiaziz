@@ -289,7 +289,11 @@ li a:hover:not(.active) {
     color: #04aa6d;
 }
 .secondMyBtn a{
-    color: #04aa6d;
+    color: white;
+    text-decoration: none;
+}
+.secondMyBtn:hover{
+    background-color: #04aa6d;
 }
 
 /* animation */
@@ -407,7 +411,7 @@ li a:hover:not(.active) {
 }
 
 .project-links a:first-child:hover {
-  background: #0056b3;
+  background: #04aa6d;
 }
 
 .project-links a:last-child {
