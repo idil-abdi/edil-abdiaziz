@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=PT+Sans+Caption&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Mako&family=PT+Sans+Caption&display=swap');
 
-html{
-    scroll-behavior: smooth;
+:root {
+    --primary-color: #04aa6d
 }
 
 *{
@@ -13,16 +12,19 @@ html{
 
 body{
     color: #d9d8d5;
+    font-family: 'Dosis';
+}
+
+section{
+    padding: 1rem;
+    margin: 0.5rem 0;
 }
 
 .main{
     margin: 1rem;
 }
 
-.profile-img{
-    border-radius: 10px;
-}
-
+/* sidebar */
 .sidebar{
     border: 1px solid white;
     height: fit-content;
@@ -30,9 +32,66 @@ body{
     margin: 10px 0;
 }
 
+.hero{
+    position: relative;
+    display: flex;
+}
+
+.heading{
+    position: relative;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: normal;
+    width: fit-content;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
+.introOne, .introTwo{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.introOne span{
+    color: var(--primary-color);
+}
+
+.heroBtnPosition{
+    width: 100%;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.myBtn{
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: all 0.3s;
+    cursor: pointer;background-color: transparent;
+    border: 3px solid var(--primary-color);
+}
+
+.myBtn a{
+    color: white;
+    text-decoration: none;
+}
+.myBtn:hover{
+    background-color: var(--primary-color);
+}
+
+
+/* end of sidebar */
+
+.profile-img{
+    border-radius: 10px;
+}
+
 .contact-detail{
     padding: 0.5rem;
-    font-family: 'PT Sans Caption';
+    
 }
 .contact-detail-info{
     display: flex;
@@ -44,11 +103,7 @@ body{
     border: 1px solid white;
 }
 
-section{
-    padding: 1rem;
-    margin: 0.5rem 0;
-    font-family: 'Dosis';
-}
+
 #about p {
     font-size: 1.5rem;
 }
@@ -89,33 +144,11 @@ section{
     color: white;
 }
 
-.hero{
-    position: relative;
-    display: flex;
-}
 
-.heading{
-    position: relative;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: normal;
-    width: fit-content;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: 300;
-}
 
-span{
-    color: #04AA6D;
-}
 
-.introOne, .introTwo{
-    font-size: 2.5rem;
-    text-align: center;
-}
+
+
 
 .skillSet{
     display: flex;
@@ -152,7 +185,6 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-family: 'PT Sans Caption';
     padding: 8px;
     padding-left: 0;
 }
@@ -212,7 +244,6 @@ li a:hover:not(.active) {
 /* contact form */
 .feedback-input {
     color:white;
-    font-family: Helvetica, Arial, sans-serif;
     font-weight:500;
     font-size: 18px;
     border-radius: 5px;
@@ -236,7 +267,6 @@ li a:hover:not(.active) {
   }
   
   [type="submit"] {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     width: 100%;
     background: #04aa6d;
     border-radius:5px;
@@ -269,32 +299,6 @@ li a:hover:not(.active) {
 }
 
 
-.myBtn{
-    width: 100%;
-    background-color: #04aa6d;
-    border-radius: 5px;
-    border: 0;
-    cursor: pointer;
-    color: white;
-    padding: 10px 15px;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-.myBtn a{
-    color: white;
-}
-.secondMyBtn{
-    background-color: transparent;
-    border: 3px solid #04aa6d;
-    color: #04aa6d;
-}
-.secondMyBtn a{
-    color: white;
-    text-decoration: none;
-}
-.secondMyBtn:hover{
-    background-color: #04aa6d;
-}
 
 /* animation */
 .hidden {
@@ -310,13 +314,7 @@ li a:hover:not(.active) {
     transform: translate(0);
 }
 
-.heroBtnPosition{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    gap: 10px;
-    margin-top: 1rem;
-}
+
 
 /* end of portfolio projects */
 
@@ -431,11 +429,6 @@ li a:hover:not(.active) {
     padding:  0.5rem 0;
 }
 
-@media(prefers-reduced-motion) {
-    .hidden {
-        transition: none;
-    }
-}
 
 @media screen and (min-width: 750px) {
     .main{
@@ -462,10 +455,4 @@ li a:hover:not(.active) {
         width: 85%;
     }
     
-}
-
-@media screen and (min-width: 1000px) {
-    .overlay {
-        width: 100%;
-    }
 }
