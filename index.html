@@ -3,20 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./asset/index.js" defer></script>
-    <link rel="stylesheet" href="./asset/css/styles.css" />
-    <link rel="stylesheet" href="./asset/css/background.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <link rel="stylesheet" href="./sass/style.css" />
+    <link rel="stylesheet" href="./background.css" />
     <title>Edil Abdiaziz</title>
   </head>
   <body>
@@ -34,390 +22,329 @@
         <div></div>
       </div>
 
-      <header>
-        <div class="topnav">
-          <div class="active">EA</div>
-          <div id="myLink">
-            <a href="#about">About Me</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+      <header class="header">
+        <!-- Mobile Navigation -->
+        <nav class="header__mobile-nav">
+          <div class="header__logo">EA</div>
+
+          <div class="header__menu" id="mobileMenu">
+            <a href="#about" class="header__link">About Me</a>
+            <a href="#skills" class="header__link">Skills</a>
+            <a href="#projects" class="header__link">Projects</a>
+            <a href="#contact" class="header__link">Contact</a>
           </div>
-          <a href="javascript:void(0);" class="icon" onclick="hamburgerBar()"
-            ><img src="./asset/img/menu.png" alt="icon" />
-          </a>
-        </div>
-        <div class="desktopNav">
-          <div class="desktopActive">
-            <li class="desktopLogo"><a href="#home">EA</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#projects">Project</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#about">About</a></li>
-          </div>
-        </div>
+
+          <button class="header__toggle" onclick="hamburgerBar()">
+            <img src="./asset/img/menu.png" alt="" />
+          </button>
+        </nav>
+
+        <!-- Desktop Navigation -->
+        <nav class="header__desktop-nav">
+          <ul class="header__list">
+            <li class="header__item header__item--logo">
+              <a href="#home" class="header__link">EA</a>
+            </li>
+
+            <li class="header__item">
+              <a href="#about" class="header__link">About</a>
+            </li>
+
+            <li class="header__item">
+              <a href="#skills" class="header__link">Skills</a>
+            </li>
+
+            <li class="header__item">
+              <a href="#projects" class="header__link">Projects</a>
+            </li>
+
+            <li class="header__item">
+              <a href="#contact" class="header__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </header>
 
-      <main class="main">
-        <div class="sidebar">
-          <div class="hero">
-            <section class="heading">
-              <div class="introOne animate__animated animate__heartBeat">
+      <!-- LAYOUT -->
+      <div class="layout">
+        <!-- DESKTOP SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar__content">
+            <div class="sidebar__intro">
+              <div class="sidebar__greeting">
                 Hi, I'm <span>Edil</span>.
               </div>
-              <div class="introTwo animate__animated animate__heartBeat">
+              <div class="sidebar__title">
                 A Software Developer.
               </div>
-              <div class="heroBtnPosition">
-                <button class="myBtn">
-                  <a href="#contact">Get in contact</a>
-                </button>
+            </div>
+            <a href="#contact" class="btn btn--primary">Get in touch</a>
+            <div class="social">
+              <a href="https://www.linkedin.com/in/edil-abdiaziz/" target="_blank" class="social__link" aria-label="LinkedIn">
+                <img src="./asset/img/linkedin.png" alt="linkedin" width="30px">
+              </a>
+              <a href="https://github.com/idil-abdi" target="_blank" class="social__link" aria-label="GitHub">
+                <img src="./asset/img/github.png" alt="github" width="30px">
+              </a>
+            </div>
+          </div>
+          <footer class="sidebar__footer">
+            © 2024 Edil. All riGitHubts reserved.
+          </footer>
+        </aside>
+
+        <!-- CONTENT -->
+        <div class="content-col">
+          <!-- Mobile profile -->
+          <div class="mobile-profile">
+            <div class="sidebar__greeting">
+                Hi, I'm <span>Edil</span>.
+              </div>
+              <div class="sidebar__title">
+                A Software Developer.
+              </div>
+            <a href="#contact" class="btn btn--primary">Get in touch</a>
+          </div>
+
+          <main class="main slide-in" id="mainContent">
+            <!-- About -->
+            <section class="section" id="about">
+              <div class="section__header">
+                <h2 class="section__title">About Me</h2>
+                <div class="section__line"></div>
+              </div>
+              <p class="section__text">
+                As a kid, I was fascinated by puzzles — piecing together
+                intricate designs or solving riddles. I didn't realize it then,
+                but that same curiosity and love for problem-solving would lead
+                me to the world of software development.
+              </p>
+              <p class="section__text">
+                Today, I'm a software developer who thrives on challenges,
+                whether it's optimizing an algorithm or designing a seamless
+                user interface. Every line of code I write is a piece of the
+                puzzle, contributing to the bigger picture of innovation and
+                creativity.
+              </p>
+            </section>
+
+            <!-- Skills -->
+            <section class="section" id="skills">
+              <div class="section__header">
+                <h2 class="section__title">Skills</h2>
+                <div class="section__line"></div>
+              </div>
+              <div class="skills-grid">
+                <div class="skill-card" data-level="95">
+                  <div class="skill-card__top">
+                    <img src="./asset/img/html.png" alt="html" width="25px" />
+                    <span class="skill-card__name">HTML</span>
+                    <span class="skill-card__pct">Advance</span>
+                  </div>
+                  <div class="skill-card__track">
+                    <div class="skill-card__bar"></div>
+                  </div>
+                </div>
+                <div class="skill-card" data-level="88">
+                  <div class="skill-card__top">
+                    <img src="./asset/img/css.png" alt="css" width="25px" />
+                    </span><span class="skill-card__name">CSS</span>
+                    <span class="skill-card__pct">Advance</span>
+                  </div>
+                  <div class="skill-card__track">
+                    <div class="skill-card__bar"></div>
+                  </div>
+                </div>
+                <div class="skill-card" data-level="85">
+                  <div class="skill-card__top">
+                    <img src="./asset/img/js.png" alt="javascript" width="25px" />
+                    <span class="skill-card__name">JavaScript</span
+                    ><span class="skill-card__pct">Intermediate</span>
+                  </div>
+                  <div class="skill-card__track">
+                    <div class="skill-card__bar"></div>
+                  </div>
+                </div>
+                <div class="skill-card" data-level="80">
+                  <div class="skill-card__top">
+                    <img src="./asset/img/react.png" alt="react" width="25px" />
+                    <span class="skill-card__name">React</span>
+                    <span class="skill-card__pct">Beginner/Intermediate</span>
+                  </div>
+                  <div class="skill-card__track">
+                    <div class="skill-card__bar"></div>
+                  </div>
+                </div>
+                <div class="skill-card" data-level="82">
+                  <div class="skill-card__top">
+                    <img src="./asset/img/tailwindcss.png" alt="tailwindcss" width="25px" />
+                    <span class="skill-card__name">Tailwind</span>
+                    <span class="skill-card__pct">Beginner</span>
+                  </div>
+                  <div class="skill-card__track">
+                    <div class="skill-card__bar"></div>
+                  </div>
+                </div>
+                <div class="skill-card" data-level="65">
+                  <div class="skill-card__top">
+                    <img src="./asset/img/mysql.png" alt="mysql" width="25px" />
+                    <span class="skill-card__name">MySQL</span
+                    ><span class="skill-card__pct">Beginner</span>
+                  </div>
+                  <div class="skill-card__track">
+                    <div class="skill-card__bar"></div>
+                  </div>
+                </div>
+                <div class="skill-card" data-level="72">
+                  <div class="skill-card__top">
+                    <img src="./asset/img/java.png" alt="mysql" width="35px" />
+                    <span class="skill-card__name">Java</span
+                    ><span class="skill-card__pct">Beginner</span>
+                  </div>
+                  <div class="skill-card__track">
+                    <div class="skill-card__bar"></div>
+                  </div>
+                </div>
+                <div class="skill-card" data-level="72">
+                  <div class="skill-card__top">
+                    <img src="./asset/img/figma.png" alt="figma" width="25px" />
+                    <span class="skill-card__name">Figma</span
+                    ><span class="skill-card__pct">Beginner</span>
+                  </div>
+                  <div class="skill-card__track">
+                    <div class="skill-card__bar"></div>
+                  </div>
+                </div>
+                <div class="skill-card" data-level="72">
+                  <div class="skill-card__top">
+                    <img src="./asset/img/sass.png" alt="sass" width="25px" />
+                    <span class="skill-card__name">Sass</span
+                    ><span class="skill-card__pct">Beginner</span>
+                  </div>
+                  <div class="skill-card__track">
+                    <div class="skill-card__bar"></div>
+                  </div>
+                </div>
               </div>
             </section>
-          </div>
-          <hr />
-          <br />
-          <div class="contact-detail">
-            <div class="contact-detail-info">
-              <div>
-                <p>Email:</p>
-                <p>edilabdiaziz@gmail.com</p>
-              </div>
-            </div>
-            <br />
-            <div class="contact-detail-info">
-              <div>
-                <p>Phone:</p>
-                <p>+44 063443 3244</p>
-              </div>
-            </div>
-          </div>
-          <br />
-          <hr />
-          <br />
-          <div class="social-media">
-            <a href="https://www.linkedin.com/in/edil-abdiaziz/" target="_blank"
-              ><img src="./asset/img/linkedin.png" alt="LinkedIn" width="50px"
-            /></a>
-            <a href="https://github.com/idil-abdi" target="_blank"
-              ><img src="./asset/img/github.png" alt="GitHub" width="50px"
-            /></a>
-          </div>
-        </div>
 
-        <div class="content">
-          <section class="border hidden" id="about">
-            <h2>About Me</h2>
-            <p>
-              As a kid, I was fascinated by puzzles—spending hours piecing
-              together intricate designs or solving riddles. I didn't realize it
-              then, but that same curiosity and love for problem-solving would
-              lead me to the world of software development.
-            </p>
-            <br />
-            <p>
-              Today, I'm a software developer who thrives on challenges, whether
-              it's optimizing an algorithm or designing a seamless user
-              interface. Every line of code I write is a piece of the puzzle,
-              contributing to the bigger picture of innovation and creativity.
-            </p>
-          </section>
-
-          <section class="border hidden" id="skills">
-            <h2>Skills</h2>
-            <div class="skillSet">
-              <div class="hidden">
-                <div class="item skillItem">
-                  <img class="imgIcon" src="./asset/img/html.png" alt="html" />
-                  <div class="skillTitle">
-                    <label for="HTML">HTML:</label>
-                    <p class="subtitle">Advance</p>
-                    <progress id="HTML" value="85" max="100"></progress>
+            <!-- Projects -->
+            <section class="section" id="projects">
+              <div class="section__header">
+                <h2 class="section__title">Projects</h2>
+                <div class="section__line"></div>
+              </div>
+              <div class="projects-grid">
+                <article class="project-card">
+                  <div class="project-card__header">
+                    <img src="./asset/img/mini-project.png" alt="mini-project" width="100%">
                   </div>
-                </div>
-              </div>
-
-              <div class="hidden">
-                <div class="item skillItem">
-                  <img class="imgIcon" src="./asset/img/css.png" alt="css" />
-                  <div class="skillTitle">
-                    <label for="CSS">CSS</label>
-                    <p class="subtitle">Advance</p>
-                    <progress id="CSS" value="80" max="100"></progress>
+                  <h3 class="project-card__title">Mini Projects</h3>
+                  <p class="project-card__desc">
+                    Welcome to my JavaScript project showcase! Explore a variety of interactive projects that highlight my coding skills and creativity. From dynamic web applications to fun mini-games, each project reflects my passion for JavaScript and problem-solving. Enjoy browsing!
+                  </p>
+                  <div class="project-card__tags">
+                    <span class="tag">HTML</span><span class="tag">CSS</span
+                    ><span class="tag">JavaScript</span>
                   </div>
-                </div>
-              </div>
-
-              <div class="hidden">
-                <div class="item skillItem">
-                  <img
-                    class="imgIcon"
-                    src="./asset/img/js.png"
-                    alt="javascript"
-                  />
-                  <div class="skillTitle">
-                    <label for="JavaScript">JavaScript</label>
-                    <p class="subtitle">Intermediate</p>
-                    <progress id="JavaScript" value="70" max="100"></progress>
-                  </div>
-                </div>
-              </div>
-
-              <div class="hidden">
-                <div class="item skillItem">
-                  <img
-                    class="imgIcon"
-                    src="./asset/img/react.png"
-                    alt="react"
-                  />
-                  <div class="skillTitle">
-                    <label for="react">React</label>
-                    <p class="subtitle">Beginner/Intermediate</p>
-                    <progress id="react" value="55" max="100"></progress>
-                  </div>
-                </div>
-              </div>
-
-              <div class="hidden">
-                <div class="item skillItem">
-                  <img
-                    class="imgIcon"
-                    src="./asset/img/tailwindcss.png"
-                    alt="Tailwind CSS"
-                  />
-                  <div class="skillTitle">
-                    <label for="tailwindcss">Tailwind CSS</label>
-                    <p class="subtitle">Beginner</p>
-                    <progress id="tailwindcss" value="45" max="100"></progress>
-                  </div>
-                </div>
-              </div>
-
-              <div class="hidden">
-                <div class="item skillItem">
-                  <img class="imgIcon" src="./asset/img/sass.png" alt="Sass" />
-                  <div class="skillTitle">
-                    <label for="sass">Sass</label>
-                    <p class="subtitle">Beginner</p>
-                    <progress id="sass" value="35" max="100"></progress>
-                  </div>
-                </div>
-              </div>
-
-              <div class="hidden">
-                <div class="item skillItem">
-                  <img
-                    class="imgIcon"
-                    src="./asset/img/figma.png"
-                    alt="Figma"
-                  />
-                  <div class="skillTitle">
-                    <label for="figma">Figma</label>
-                    <p class="subtitle">Intermediate</p>
-                    <progress id="figma" value="70" max="100"></progress>
-                  </div>
-                </div>
-              </div>
-
-              <div class="hidden">
-                <div class="item skillItem">
-                  <img class="imgIcon" src="./asset/img/java.png" alt="Java" />
-                  <div class="skillTitle">
-                    <label for="java">Java</label>
-                    <p class="subtitle">Beginner</p>
-                    <progress id="java" value="30" max="100"></progress>
-                  </div>
-                </div>
-              </div>
-              <div class="hidden">
-                <div class="item skillItem">
-                  <img
-                    class="imgIcon"
-                    src="./asset/img/mysql.png"
-                    alt="mysql"
-                  />
-                  <div class="skillTitle">
-                    <label for="mysql">MySQL</label>
-                    <p class="subtitle">Beginner</p>
-                    <progress id="mysql" value="30" max="100"></progress>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="border" id="projects">
-            <h2 class="hidden">Projects</h2>
-
-            <div class="" id="myBtnContainer"></div>
-
-            <div class="container hidden">
-              <section id="projects" class="projects">
-                <div class="project-grid">
-                  <!-- Project 1 -->
-                  <div class="project-card">
-                    <img
-                      src="./asset/img/golden-crust.png"
-                      alt="golden-crust"
-                    />
-                    <div class="project-content">
-                      <h3>Golden Crust</h3>
-                      <p>
-                        I created Goled Crust, a responsive landing page built
-                        with HTML, CSS, and Sass, featuring a clean hero
-                        section, About Us, and Product section. The project
-                        focuses on writing semantic HTML and using Sass features
-                        like variables and nesting to keep the code modular,
-                        maintainable, and well-organized. It highlights my
-                        ability to build structured, responsive layouts with
-                        clean and efficient front-end code.
-                      </p>
-                      <div class="tags">
-                        <span>HTML</span><span>CSS</span><span>Sass</span
-                        ><span>JavaScript</span>
-                      </div>
-                      <div class="project-links">
-                        <a
-                          href="https://github.com/idil-abdi/golden-crust"
-                          target="_blank"
-                          >GitHub</a
-                        >
-                        <a
-                          href="https://idil-abdi.github.io/golden-crust/"
-                          target="_blank"
-                          >Live Demo</a
-                        >
-                      </div>
+                  <div class="project-card__actions">
+                    <div class="position">
+                       <button class="icon-btn"><a href="https://github.com/idil-abdi/mini-projects" target="_blank">GitHub</a></button>
+                      <button class="icon-btn"><a href="https://idil-abdi.github.io/mini-projects/" target="_blank">Demo</a></button>
                     </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                  <div class="project-card__header">
+                    <img src="./asset/img/golden-crust.png" alt="" width="100%">
+                    <!-- <div class="project-card__emoji">✅</div> -->
                   </div>
+                  <h3 class="project-card__title">Golden Crust</h3>
+                  <p class="project-card__desc">
+                   I created Goled Crust, a responsive landing page built with HTML, CSS, and Sass, featuring a clean hero section, About Us, and Product section. The project focuses on writing semantic HTML and using Sass features like variables and nesting to keep the code modular, maintainable, and well-organized. It highlights my ability to build structured, responsive layouts with clean and efficient front-end code.
+                  </p>
+                  <div class="project-card__tags">
+                    <span class="tag">HTML</span><span class="tag">CSS</span
+                    ><span class="tag">JavaScript</span><span class="tag">JavaScript</span>
+                  </div>
+                  <div class="project-card__actions">
+                    <div class="position">
+                       <button class="icon-btn"><a href="#">GitHub</a></button>
+                      <button class="icon-btn"><a href="#">Demo</a></button>
+                    </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                  <div class="project-card__header">
+                    <img src="./asset/img/stitch-game.png" alt="stitch-game" width="100%">
+                  </div>
+                  <h3 class="project-card__title">stitch-game</h3>
+                  <p class="project-card__desc">
+                    An interactive browser game inspired by Stitch, built with HTML, CSS, Sass, and JavaScript. This project showcases responsive design, DOM manipulation, and dynamic game logic to create an engaging user experience.
+                  </p>
+                  <div class="project-card__tags">
+                    <span class="tag">HTML</span><span class="tag">CSS</span
+                    ><span class="tag">Sass</span><span class="tag">JavaScript</span>
+                  </div>
+                  <div class="project-card__actions">
+                    <div class="position">
+                       <button class="icon-btn"><a href="https://github.com/idil-abdi/super-duper-lamp" target="_blank">GitHub</a></button>
+                      <button class="icon-btn"><a href="https://idil-abdi.github.io/super-duper-lamp/" target="_blank">Demo</a></button>
+                    </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                  <div class="project-card__header">
+                    <img src="./asset/img/todolist.png" alt="todolist" width="100%">
+                  </div>
+                  <h3 class="project-card__title">stitch-game</h3>
+                  <p class="project-card__desc">
+                   This is a category-based todo list app built with HTML, CSS, SCSS, and JavaScript, where users can create, edit, delete, and complete tasks within different categories. It uses CRUD operations to manage tasks dynamically and local storage to save data in the browser, ensuring todos persist even after page refresh.
+                  </p>
+                  <div class="project-card__tags">
+                    <span class="tag">HTML</span><span class="tag">CSS</span
+                    ><span class="tag">Sass</span><span class="tag">JavaScript</span>
+                  </div>
+                  <div class="project-card__actions">
+                    <div class="position">
+                       <button class="icon-btn"><a href="https://github.com/idil-abdi/cautious-parakeet" target="_blank">GitHub</a></button>
+                      <button class="icon-btn"><a href="https://idil-abdi.github.io/scautious-parakeet/" target="_blank">Demo</a></button>
+                    </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                  <div class="project-card__header">
+                    <img src="./asset/img/snap.jpg" alt="snap-game" width="100%">
+                  </div>
+                  <h3 class="project-card__title">Snap Card Game</h3>
+                  <p class="project-card__desc">
+                    This Snap game is a simple and interactive card game developed using Java. It allows two players to compete by matching cards quickly, testing both speed and accuracy. The project demonstrates the use of object-oriented programming, game logic, and user interaction in Java.
+                  </p>
+                  <div class="project-card__tags">
+                    <span class="tag">Java</span>
+                  </div>
+                  <div class="project-card__actions">
+                    <div class="position">
+                       <button class="icon-btn"><a href="https://github.com/idil-abdi/snap-game" target="_blank">GitHub</a></button>
+                    </div>
+                    </div>
+                </article>
+                
+              </div>
+            </section>
 
-                  <!-- Project 2 -->
-                  <div class="project-card">
-                    <img
-                      src="./asset/img/mini-project.png"
-                      alt="Mini Projects"
-                    />
-                    <div class="project-content">
-                      <h3>Mini Projects</h3>
-                      <p>
-                        Welcome to my JavaScript project showcase! Explore a
-                        variety of interactive projects that highlight my coding
-                        skills and creativity. From dynamic web applications to
-                        fun mini-games, each project reflects my passion for
-                        JavaScript and problem-solving. Enjoy browsing!
-                      </p>
-                      <div class="tags">
-                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                      </div>
-                      <div class="project-links">
-                        <a
-                          href="https://github.com/idil-abdi/mini-projects"
-                          target="_blank"
-                          >GitHub</a
-                        >
-                        <a
-                          href="https://idil-abdi.github.io/mini-projects/"
-                          target="_blank"
-                          >Live Demo</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Project 3 -->
-                  <div class="project-card">
-                    <img src="./asset/img/stitch-game.png" alt="stitch game" />
-                    <div class="project-content">
-                      <h3>Find Stitch</h3>
-                      <p>
-                        An interactive browser game inspired by Stitch, built
-                        with HTML, CSS, Sass, and JavaScript. This project
-                        showcases responsive design, DOM manipulation, and
-                        dynamic game logic to create an engaging user
-                        experience.
-                      </p>
-                      <div class="tags">
-                        <span>HTML</span><span>CSS</span><span>Sass</span
-                        ><span>JavaScript</span>
-                      </div>
-                      <div class="project-links">
-                        <a
-                          href="https://github.com/idil-abdi/super-duper-lamp"
-                          target="_blank"
-                          >GitHub</a
-                        >
-                        <a
-                          href="https://idil-abdi.github.io/super-duper-lamp/"
-                          target="_blank"
-                          >Live Demo</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Project 4 -->
-                  <div class="project-card">
-                    <img src="./asset/img/todolist.png" alt="stitch game" />
-                    <div class="project-content">
-                      <h3>Todo List</h3>
-                      <p>
-                        This is a category-based todo list app built with HTML,
-                        CSS, SCSS, and JavaScript, where users can create, edit,
-                        delete, and complete tasks within different categories.
-                        It uses CRUD operations to manage tasks dynamically and
-                        local storage to save data in the browser, ensuring
-                        todos persist even after page refresh.
-                      </p>
-                      <div class="tags">
-                        <span>HTML</span><span>CSS</span><span>Sass</span
-                        ><span>JavaScript</span>
-                      </div>
-                      <div class="project-links">
-                        <a
-                          href="https://github.com/idil-abdi/cautious-parakeet"
-                          target="_blank"
-                          >GitHub</a
-                        >
-                        <a
-                          href="https://idil-abdi.github.io/cautious-parakeet/"
-                          target="_blank"
-                          >Live Demo</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Project 5 -->
-                  <div class="project-card">
-                    <img src="./asset/img/snap.jpg" alt="snap game" />
-                    <div class="project-content">
-                      <h3>Snap Card Game</h3>
-                      <p>
-                        This Snap game is a simple and interactive card game
-                        developed using Java. It allows two players to compete
-                        by matching cards quickly, testing both speed and
-                        accuracy. The project demonstrates the use of
-                        object-oriented programming, game logic, and user
-                        interaction in Java.
-                      </p>
-                      <div class="tags">
-                        <span>Java</span>
-                      </div>
-                      <div class="project-links">
-                        <a
-                          href="https://github.com/idil-abdi/snap-game"
-                          target="_blank"
-                          >GitHub</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </section>
-
-          <section class="border hidden" id="contact">
-            <h2>Contact</h2>
-
-            <form
+            <!-- Contact -->
+            <section class="section" id="contact">
+              <div class="section__header">
+                <h2 class="section__title">Contact</h2>
+                <div class="section__line"></div>
+              </div>
+              <div class="contact-form-wrap">
+                <p class="contact-form-wrap__intro">
+                  Have a project in mind or just want to say hi? Fill out the
+                  form and I'll get back to you as soon as possible.
+                </p>
+                <form
               id="form"
               action="https://api.web3forms.com/submit"
               method="POST"
@@ -469,12 +396,13 @@
               />
               <span id="submit-error"></span>
             </form>
-          </section>
+              </div>
+            </section>
+          </main>
         </div>
-      </main>
-      <div class="footer">
-        <p>© 2025 Edil Abdiaziz. All rights reserved.</p>
       </div>
+
+      <script src="script.js"></script>
     </div>
   </body>
 </html>
