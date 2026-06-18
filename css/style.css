@@ -37,18 +37,15 @@ svg {
   color: white;
   text-decoration: none;
   font-size: 1rem;
-  border-bottom: 1px solid #1a2e1a;
-    text-align: center;
 }
 .header__link:hover {
-  /* background-color: #ddd; */
-  color: #04aa6d;;
-  border: 1px solid #04aa6d;
+  background-color: #ddd;
+  color: black;
 }
 .header__mobile-nav {
   position: relative;
   overflow: hidden;
-  background-color: #0d1a0d;
+  background-color: #9fb4e7;
 }
 .header__logo {
   padding: 14px 16px;
@@ -254,7 +251,6 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  overflow: clip;
 }
 @media (max-width: 767px) {
   .main {
@@ -528,32 +524,4 @@ textarea {
 
 .input-group span i {
   color: #04AA6D;
-}
-
-/* animation */
-.hidden {
-    opacity: 0;
-    filter: blur();
-    transition: all 1s ease-in-out;
-    transform: translateX(100%);
-}
-
-.show{
-    opacity: 1;
-    filter: blur();
-    transform: translate(0);
-}
-
-/* footer */
-.footer {
-  padding: 1rem 2rem;
-  font-size: 0.7rem;
-  color: #374151;
-  border-top: 1px solid #1a2e1a;
-}
-
-@media (min-width: 768px) {
-  .footer {
-    display: none;
-}
 }
